@@ -19,7 +19,7 @@ export default function Main() {
     const [selectedItem, setSelectedItem] = useState<PhotoData>();
 
     useEffect(() => {
-        fetch("http://localhost:8080/photo-data")
+        fetch(`${process.env.REACT_APP_SERVER_HOST}:${process.env.REACT_APP_SERVER_PORT}/photo-data`)
             .then(res => res.json())
             .then(result => {
                 setPhotoList(result);

@@ -9,7 +9,7 @@ interface PhotoItemPreviewProps{
 export default function PhotoItemPreview(props: PhotoItemPreviewProps) {
     return (
         <div className="photo-item-preview">{props.photoitemdata.name}
-        <img src={`data:image/png;base64,${props.photoitemdata.image}`}></img>
+        <img src={`data:image/png;base64,${props.photoitemdata.image}`} alt={props.photoitemdata.name}></img>
         </div>
     )
 }
